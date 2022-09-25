@@ -1,0 +1,19 @@
+package springdatajpa._nhatminh;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import springdatajpa._nhatminh.entity.ChuyenBay;
+import springdatajpa._nhatminh.repository.ChuyenbayRepository;
+
+@SpringBootTest
+class ApplicationTests {
+	ChuyenbayRepository rb1 ;
+
+	@Test
+	void cau1() {
+		ChuyenBay cb1 = rb1.findChuyenBay("VN216");
+		System.out.print(cb1);
+	}
+
+}

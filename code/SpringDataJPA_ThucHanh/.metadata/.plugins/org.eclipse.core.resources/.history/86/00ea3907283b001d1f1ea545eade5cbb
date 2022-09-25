@@ -1,0 +1,5 @@
+package springdatajpa._nhatminh.entity;
+
+public class ChuyenBay {
+
+}

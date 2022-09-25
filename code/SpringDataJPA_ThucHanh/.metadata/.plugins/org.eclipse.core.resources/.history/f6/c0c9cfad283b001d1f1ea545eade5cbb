@@ -1,0 +1,5 @@
+package springdatajpa._nhatminh.repository;
+
+public interface ChuyenbayRepository {
+
+}

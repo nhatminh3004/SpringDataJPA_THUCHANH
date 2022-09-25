@@ -1,0 +1,9 @@
+package springdatajpa._nhatminh.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import springdatajpa._nhatminh.entity.ChuyenBay;
+
+public interface ChuyenbayRepository extends JpaRepository<ChuyenBay, String> {
+	ChuyenBay findChuyenBay(String macb);
+}

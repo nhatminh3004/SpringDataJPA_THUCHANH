@@ -1,0 +1,12 @@
+
+
+spring.datasource.url=jdbc:postgresql://localhost/testDB
+spring.datasource.username=postgres
+spring.datasource.password=admin
+
+
+spring.jpa.show-sql=true
+
+spring.jpa.properties.hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext
+spring.jpa.properties.hibernate.id.new_generator_mappings=true
+spring.jpa.hibernate.ddl-auto=update
