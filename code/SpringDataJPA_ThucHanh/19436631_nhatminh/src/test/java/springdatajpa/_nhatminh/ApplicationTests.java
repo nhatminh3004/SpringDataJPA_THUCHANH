@@ -79,5 +79,13 @@ class ApplicationTests {
         System.out.println("Số chuyến bay xuất phát Sài Gòn và đi Ban Mê Thuộc  : " +soChuyenBayDiSaiGon);
 
     }
+    @Test
+        //Có bao nhiêu loại máy báy Boeing.
+    void cau7() {
+        int soMayBayBoeing = maybayService.findSoMayBayBoeing();
+        System.out.println("Số máy bay Boeing  : " +soMayBayBoeing);
+
+    }
+
 
 }
