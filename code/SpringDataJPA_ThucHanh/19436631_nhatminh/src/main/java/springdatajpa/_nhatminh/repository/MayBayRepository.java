@@ -19,4 +19,7 @@ public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
     @Transactional
     @Query(value = "select count(*) from maybay where loai like 'Boeing%'   ", nativeQuery = true)
     public int findSoMayBayBoeing();
+    @Transactional
+    @Query(value = "select  maybay.mamb from nhanvien inner join chungnhan  on nhanvien.manv = chungnhan.manv inner join maybay  on maybay.mamb = chungnhan.mamb where nhanvien.ten like  'Nguyen%'   ", nativeQuery = true)
+    public List<String> maMayBayNhanVienHoNGUYENLAI();
 }

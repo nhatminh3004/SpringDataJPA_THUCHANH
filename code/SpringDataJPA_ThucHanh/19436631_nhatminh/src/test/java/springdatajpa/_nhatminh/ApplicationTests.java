@@ -45,6 +45,7 @@ class ApplicationTests {
             System.out.println(cb);
         }
     }
+
     @Test
         //cho biết Nhân viên có lương <10000
     void cau3() {
@@ -54,6 +55,7 @@ class ApplicationTests {
             System.out.println(nv);
         }
     }
+
     @Test
         //cho biết các chuyến bay có độ dài đường bay nhỏ hơn 10000km và lớn hơn 8000 km
     void cau4() {
@@ -63,48 +65,54 @@ class ApplicationTests {
             System.out.println(cb);
         }
     }
+
     @Test
         //Cho biết các chuyến bay xuất phát từ Sài Gòn (SGN) đi Ban Mê Thuộc (BMV).
     void cau5() {
-        List<ChuyenBay> danhSachChuyenBay = chuyenbayService.findChuyenBayCau5("SGN","BMV");
+        List<ChuyenBay> danhSachChuyenBay = chuyenbayService.findChuyenBayCau5("SGN", "BMV");
         System.out.println("Danh sách chuyến bay xuất phát Sài Gòn và đi Ban Mê Thuộc  : ");
         for (ChuyenBay cb : danhSachChuyenBay) {
             System.out.println(cb);
         }
     }
+
     @Test
         //Có bao nhiêu chuyến bay xuất phát từ Sài Gòn (SGN).
     void cau6() {
-  int soChuyenBayDiSaiGon = chuyenbayService.sochuyenBayXuatPhatSaiGon("SGN");
-        System.out.println("Số chuyến bay xuất phát Sài Gòn và đi Ban Mê Thuộc  : " +soChuyenBayDiSaiGon);
+        int soChuyenBayDiSaiGon = chuyenbayService.sochuyenBayXuatPhatSaiGon("SGN");
+        System.out.println("Số chuyến bay xuất phát Sài Gòn và đi Ban Mê Thuộc  : " + soChuyenBayDiSaiGon);
 
     }
+
     @Test
         //Có bao nhiêu loại máy báy Boeing.
     void cau7() {
         int soMayBayBoeing = maybayService.findSoMayBayBoeing();
-        System.out.println("Số máy bay Boeing  : " +soMayBayBoeing);
+        System.out.println("Số máy bay Boeing  : " + soMayBayBoeing);
 
     }
+
     @Test
         //Cho biết tổng số lương phải trả cho các nhân viên.
     void cau8() {
         int tongsoLuong = nhanvienService.tongsoluongtraNhanVien();
-        System.out.println("Tổng số lương phải trả cho các nhân viên  : " +tongsoLuong);
+        System.out.println("Tổng số lương phải trả cho các nhân viên  : " + tongsoLuong);
 
     }
+
     @Test
         //Cho biết mã số của các phi công lái máy bay Boeing
     void cau9() {
-        int i=0;
-       List<String> masonhanvienLaiBoeing= nhanvienService.manhanvienLaiMayBayBoeing();
+        int i = 0;
+        List<String> masonhanvienLaiBoeing = nhanvienService.manhanvienLaiMayBayBoeing();
         System.out.println("Danh sách mã nhân viên lái máy bay Boeing");
-       for (String manv : masonhanvienLaiBoeing){
-           i++;
-           System.out.println("mã nhân viên" +i+ ": " +manv);
+        for (String manv : masonhanvienLaiBoeing) {
+            i++;
+            System.out.println("mã nhân viên" + i + ": " + manv);
 
-       }
+        }
     }
+
     @Test
         //Cho biết các nhân viên có thể lái máy bay có mã số 747
     void cau10() {
@@ -117,6 +125,18 @@ class ApplicationTests {
         }
     }
 
+    @Test
+        //Cho biết mã máy bay mà nhân viên họ NGuyễn có thể Lái
+    void cau11() {
+
+        List<String> mamayBays = maybayService.maMayBayNhanVienHoNGUYENLAI();
+        System.out.println("Danh sách mã máy bay nhân viên họ Nguyễn có thể lái");
+        for (String mamb : mamayBays) {
+
+            System.out.println(mamb);
+
+        }
+    }
 
 
 }
