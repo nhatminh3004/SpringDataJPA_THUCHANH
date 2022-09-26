@@ -104,8 +104,17 @@ class ApplicationTests {
            System.out.println("mã nhân viên" +i+ ": " +manv);
 
        }
+    }
+    @Test
+        //Cho biết các nhân viên có thể lái máy bay có mã số 747
+    void cau10() {
+        List<NhanVien> danhSachNhanVienLai747 = nhanvienService.findNhanVienBoeing747();
+        System.out.println("Danh sách nhân viên lái máy bay mã số 747  : ");
 
+        for (NhanVien nv : danhSachNhanVienLai747) {
 
+            System.out.println(nv);
+        }
     }
 
 
