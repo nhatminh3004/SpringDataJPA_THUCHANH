@@ -14,4 +14,10 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
     @Transactional
     @Query(value = "select * from nhanvien where  luong <10000  ", nativeQuery = true)
     public List<NhanVien> findNhanVienLuongNhoHon10000();
+    @Transactional
+    @Query(value = " select sum(luong) from nhanvien", nativeQuery = true)
+    public int  tongsoluongtraNhanVien();
+
+    @Query(value = " select  nhanvien.manv from nhanvien inner join chungnhan  on nhanvien.manv = chungnhan.manv inner join maybay  on maybay.mamb = chungnhan.mamb where  loai like 'Boeing%'", nativeQuery = true)
+    public List<String> manhanvienLaiMayBayBoeing();
 }

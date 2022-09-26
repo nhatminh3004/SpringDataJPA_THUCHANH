@@ -86,6 +86,28 @@ class ApplicationTests {
         System.out.println("Số máy bay Boeing  : " +soMayBayBoeing);
 
     }
+    @Test
+        //Cho biết tổng số lương phải trả cho các nhân viên.
+    void cau8() {
+        int tongsoLuong = nhanvienService.tongsoluongtraNhanVien();
+        System.out.println("Tổng số lương phải trả cho các nhân viên  : " +tongsoLuong);
+
+    }
+    @Test
+        //Cho biết mã số của các phi công lái máy bay Boeing
+    void cau9() {
+        int i=0;
+       List<String> masonhanvienLaiBoeing= nhanvienService.manhanvienLaiMayBayBoeing();
+        System.out.println("Danh sách mã nhân viên lái máy bay Boeing");
+       for (String manv : masonhanvienLaiBoeing){
+           i++;
+           System.out.println("mã nhân viên" +i+ ": " +manv);
+
+       }
+
+
+    }
+
 
 
 }
