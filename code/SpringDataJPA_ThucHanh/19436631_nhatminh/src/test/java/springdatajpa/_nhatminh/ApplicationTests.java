@@ -173,6 +173,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Cho biết tên phí công lái máy bay Boeing
+    void cau15() {
+
+        List<String> listNamePhiCongBoeing = nhanvienService.findTenPhiCongLaiBoeing();
+        System.out.println("Danh sách Phi Công lái máy bay Boeing : ");
+        for (String name : listNamePhiCongBoeing) {
+
+            System.out.println(name);
+
+        }
+    }
 
 
 }
