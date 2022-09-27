@@ -149,6 +149,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Cho biết các loại máy bay có thể thực hiện chuyến bay VN280.
+    void cau13() {
+
+        List<String> listMayBay = maybayService.maMayBayThucHienDuongBayVn280();
+        System.out.println("Danh sách máy bay thực hiện được chuyến bay VN280 : ");
+        for (String maybay : listMayBay) {
+
+            System.out.println(maybay);
+
+        }
+    }
 
 
 }
