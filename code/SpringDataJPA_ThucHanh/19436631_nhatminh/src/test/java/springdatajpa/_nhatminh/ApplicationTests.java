@@ -197,6 +197,17 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Giả sử một hành khách muốn đi thẳng từ ga A đến ga B rồi quay trở về ga A. Cho biết các đường bay nào có thể đáp ứng yêu cầu này.
+    void cau17() {
+        List<ChuyenBay> danhSachChuyenBayDapUngNhuCau = chuyenbayService.chuyenbayADenBVaQuayVeA();
+        System.out.println("Danh sách chuyến bay A đến B rồi về A  : ");
+
+        for (ChuyenBay chuyenBay : danhSachChuyenBayDapUngNhuCau) {
+
+            System.out.println(chuyenBay);
+        }
+    }
 
 
 }
