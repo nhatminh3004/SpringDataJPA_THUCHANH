@@ -137,6 +137,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Cho biết mã số của các phi công vừa lái được Boeing vừa lái được Airbus
+    void cau12() {
+
+        List<String> maPhiCongs = nhanvienService.findMaSoPhiCongBoeingAndAirbus();
+        System.out.println("Danh sách mã phi công lái được Boeing và Airbus : ");
+        for (String maphiCong : maPhiCongs) {
+
+            System.out.println(maphiCong);
+
+        }
+    }
 
 
 }
