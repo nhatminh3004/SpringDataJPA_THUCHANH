@@ -185,6 +185,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Với mỗi loại máy bay có phi công lái cho biết mã số, loại máy báy và tổng số phi công có thể lái loại máy bay đó.
+    void cau16() {
+
+        List<String> listThongTinMayBay = maybayService.findvoiMoiLoaimaybayChoBietMaSoAndLoaiAndSoPhiCongCoTheLai();
+        System.out.println("Danh sách thông tin máy bay và loại tương ứng với số phi công có thể lái : ");
+        for (String info : listThongTinMayBay) {
+
+            System.out.println(info);
+
+        }
+    }
 
 
 }
