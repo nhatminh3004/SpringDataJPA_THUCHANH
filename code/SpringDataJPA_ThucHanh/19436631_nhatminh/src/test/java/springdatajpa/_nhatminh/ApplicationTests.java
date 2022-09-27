@@ -161,6 +161,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Cho biết các chuyến bay có thể được thực hiện bởi máy bay Airbus A320
+    void cau14() {
+
+        List<String> listChuyenBay = chuyenbayService.chuyenbaythuchienByAirbusA320();
+        System.out.println("Danh sách chuyến bay được thực hiện bởi Airbus A320 : ");
+        for (String cb : listChuyenBay) {
+
+            System.out.println(cb);
+
+        }
+    }
 
 
 }
