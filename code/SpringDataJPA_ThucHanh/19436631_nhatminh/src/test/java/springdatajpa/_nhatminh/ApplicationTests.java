@@ -208,6 +208,18 @@ class ApplicationTests {
             System.out.println(chuyenBay);
         }
     }
+    @Test
+        //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
+    void cau18() {
+
+        List<String> listThongTinChuyenBay = maybayService.findvoiMoiLoaimaybayChoBietMaSoAndLoaiAndSoPhiCongCoTheLai();
+        System.out.println("Danh sách số chuyến bay xuất phát theo từng ga : : ");
+        for (String info : listThongTinChuyenBay) {
+
+            System.out.println(info);
+
+        }
+    }
 
 
 }

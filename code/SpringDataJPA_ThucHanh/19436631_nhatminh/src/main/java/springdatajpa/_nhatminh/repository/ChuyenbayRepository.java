@@ -32,4 +32,6 @@ public interface ChuyenbayRepository extends JpaRepository<ChuyenBay, String> {
     public List<String> chuyenbaythuchienByAirbusA320();
     @Query(value = "select  * from chuyenbay where gadi in (select  gaden from chuyenbay) and gaden in (select  gadi from  chuyenbay) ", nativeQuery = true)
     public List<ChuyenBay> chuyenbayADenBVaQuayVeA();
+    @Query(value = "select gadi,count(*) as \"số chuyến bay xuất phát\" from chuyenbay group by  gadi ", nativeQuery = true)
+    public List<String> sochuyenbayxuatphatTheoTungGA();
 }
