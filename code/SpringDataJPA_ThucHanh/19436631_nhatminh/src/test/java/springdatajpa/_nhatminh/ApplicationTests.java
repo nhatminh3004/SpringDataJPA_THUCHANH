@@ -257,6 +257,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //		Cho biết mã số của các phi công chỉ lái được 3 loại máy bay
+    void cau22() {
+
+        List<String> listmasoPhiCong3MayBay = nhanvienService.findNhanVienLaiDuoc3LoaiMayBay();
+        System.out.println(" Mã số của các phi công chỉ lái được 3 loại máy bay : ");
+        for (String nv : listmasoPhiCong3MayBay) {
+
+            System.out.println(nv);
+
+        }
+    }
 
 
 }
