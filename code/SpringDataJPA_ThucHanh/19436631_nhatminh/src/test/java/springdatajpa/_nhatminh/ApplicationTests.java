@@ -34,6 +34,7 @@ class ApplicationTests {
         for (ChuyenBay cb : danhSachChuyenBayDiDaLat) {
             System.out.println(cb);
         }
+
     }
 
     @Test
@@ -212,7 +213,7 @@ class ApplicationTests {
         //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
     void cau18() {
 
-        List<String> listThongTinChuyenBay = maybayService.findvoiMoiLoaimaybayChoBietMaSoAndLoaiAndSoPhiCongCoTheLai();
+        List<String> listThongTinChuyenBay = chuyenbayService.sochuyenbayxuatphatTheoTungGA();
         System.out.println("Danh sách số chuyến bay xuất phát theo từng ga : : ");
         for (String info : listThongTinChuyenBay) {
 
