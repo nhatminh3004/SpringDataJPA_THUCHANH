@@ -245,6 +245,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //	Với mỗi địa điểm xuất phát cho biết có bao nhiêu chuyến bay có thể khởi hành trước 12:00.
+    void cau21() {
+
+        List<String> listChuyenBayKhoiHanhTruoc12h = chuyenbayService.cau21();
+        System.out.println("Danh sách chuyến bay khởi hành trước 12h theo từng địa điểm : ");
+        for (String cb : listChuyenBayKhoiHanhTruoc12h) {
+
+            System.out.println(cb);
+
+        }
+    }
 
 
 }

@@ -38,4 +38,6 @@ public interface ChuyenbayRepository extends JpaRepository<ChuyenBay, String> {
     public List<String> tongchiphiphaitraPhiCongCuaTungChuyenBay();
     @Query(value = "select macb from chuyenbay where  giodi<'12:00' group by  macb", nativeQuery = true)
     public List<String> danhsachChuyenBayKhoiHanhTruoc12h();
+    @Query(value = "select gadi,count(*) \"Số lượng chuyến bay xuất phát trước 12h\" from chuyenbay where  giodi<'12:00' group by  gadi", nativeQuery = true)
+    public List<String> cau21();
 }
