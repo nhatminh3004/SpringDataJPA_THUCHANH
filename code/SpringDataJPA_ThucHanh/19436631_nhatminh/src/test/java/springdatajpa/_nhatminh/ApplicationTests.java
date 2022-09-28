@@ -269,6 +269,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Với mỗi phi công có thể lái nhiều hơn 3 loại máy bay, cho biết mã số phi công và tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái.
+    void cau23() {
+
+        List<String> list = nhanvienService.cau23();
+        System.out.println(" Danh sách phi công có thể lái nhiều hơn 3 loại máy bay có tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái : ");
+        for (String nv : list) {
+
+            System.out.println(nv);
+
+        }
+    }
 
 
 }
