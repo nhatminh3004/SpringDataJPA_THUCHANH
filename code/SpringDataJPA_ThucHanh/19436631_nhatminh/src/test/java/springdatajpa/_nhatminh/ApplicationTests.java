@@ -233,6 +233,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //	Cho biết danh sách các chuyến bay có thể khởi hành trước 12:00
+    void cau20() {
+
+        List<String> listChuyenBayKhoiHanhTruoc12h = chuyenbayService.danhsachChuyenBayKhoiHanhTruoc12h();
+        System.out.println("Danh sách chuyến bay khởi hành trước 12h : ");
+        for (String cb : listChuyenBayKhoiHanhTruoc12h) {
+
+            System.out.println(cb);
+
+        }
+    }
 
 
 }
