@@ -293,6 +293,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Tìm nhân viên không phải là phi công
+    void cau25() {
+
+        List<NhanVien> listNhanVienKhongPhaiPhiCong = nhanvienService.findNhanVienKhongPhaiPhiCong();
+        System.out.println(" Danh sách nhân viên không phải phi công : ");
+        for (NhanVien nv : listNhanVienKhongPhaiPhiCong) {
+
+            System.out.println(nv);
+
+        }
+    }
 
 
 }
