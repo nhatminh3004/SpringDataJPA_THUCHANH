@@ -345,6 +345,15 @@ class ApplicationTests {
         System.out.println("Tổng lương phải trả cho nhân viên là : " + list);
 
     }
+    @Test
+        //28.Tìm các chuyến bay có thể được thực hiện bởi tất cả các loại máy bay Boeing.
+    void cau28() {
+        List<ChuyenBay> list = chuyenbayService.cau28();
+        System.out.println("Các chuyến bay được thực hiện bởi tất cả loại máy bay Boeing là : " );
+        for(ChuyenBay  cb : list){
+            System.out.println(cb);
+        }
+    }
 
 
 }
