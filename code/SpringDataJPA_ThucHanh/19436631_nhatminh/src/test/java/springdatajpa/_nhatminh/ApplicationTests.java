@@ -305,6 +305,20 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Tìm nhân viên  có lương cao nhất
+    void cau26() {
+
+        List<String> list = nhanvienService.findNhanVienLuongCaoNhat();
+
+        System.out.println(" Nhân viên có lương cao nhất là  : ");
+        System.out.println("Mã nhân viên - Lương");
+        for (String nv : list) {
+
+            System.out.println(nv);
+
+        }
+    }
 
 
 }

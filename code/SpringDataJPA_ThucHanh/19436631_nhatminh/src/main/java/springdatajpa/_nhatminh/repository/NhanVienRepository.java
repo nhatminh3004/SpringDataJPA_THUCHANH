@@ -38,4 +38,6 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
     public List<String> cau24();
     @Query(value = "select * from nhanvien where  manv not in (select cn.manv from chungnhan cn)", nativeQuery = true)
     public List<NhanVien> findNhanVienKhongPhaiPhiCong();
+    @Query(value = "select   n.manv,n.luong  from nhanvien n  where  n.manv in (select  c.manv from  chungnhan c) and  luong in (select max(n2.luong) from nhanvien n2)", nativeQuery = true)
+    public List<String> findNhanVienLuongCaoNhat();
 }
