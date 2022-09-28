@@ -221,6 +221,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
+    void cau19() {
+
+        List<String> listchiphiPhaiTraChoTungChuyenBay = chuyenbayService.tongchiphiphaitraPhiCongCuaTungChuyenBay();
+        System.out.println("Tổng chi phí phải trả cho từng chuyến bay : ");
+        for (String info : listchiphiPhaiTraChoTungChuyenBay) {
+
+            System.out.println(info);
+
+        }
+    }
 
 
 }
