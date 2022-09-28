@@ -33,4 +33,7 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
     public List<String> findNhanVienLaiDuoc3LoaiMayBay();
     @Query(value = "SELECT  cn.MaNV, TamBay,loai FROM NHANVIEN nv, MAYBAY mb, CHUNGNHAN cn WHERE nv.MaNV = cn.MaNV AND mb.MaMB = cn.MaMB AND cn.MaNV IN (SELECT nv.MaNV FROM NHANVIEN nv, CHUNGNHAN cn WHERE nv.MaNV = cn.MaNV GROUP BY nv.MaNV HAVING COUNT(MAMB) > 3)\n", nativeQuery = true)
     public List<String> cau23();
+    @Query(value = "select nv.manv,count(mb.mamb) as \"Tổng số  loại máy bay phi công có thể lái\" from nhanvien nv inner join chungnhan c on nv.manv = c.manv join maybay mb on mb.mamb = c.mamb\n" +
+            "and  nv.manv in (select c1.manv from chungnhan c1) group by nv.manv", nativeQuery = true)
+    public List<String> cau24();
 }

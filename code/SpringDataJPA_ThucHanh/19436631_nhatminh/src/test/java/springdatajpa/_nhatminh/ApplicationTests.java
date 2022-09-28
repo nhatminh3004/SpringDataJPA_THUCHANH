@@ -281,6 +281,18 @@ class ApplicationTests {
 
         }
     }
+    @Test
+        //Với mỗi phi công cho biết mã số phi công và tổng số loại máy bay mà phi công đó có thể lái
+    void cau24() {
+
+        List<String> list = nhanvienService.cau24();
+        System.out.println(" Mã phi công và tổng só loại máy bay có thể lái : ");
+        for (String nv : list) {
+
+            System.out.println(nv);
+
+        }
+    }
 
 
 }
