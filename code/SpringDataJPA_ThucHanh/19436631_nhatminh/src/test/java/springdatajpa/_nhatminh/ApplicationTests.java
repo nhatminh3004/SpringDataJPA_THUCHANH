@@ -138,6 +138,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Cho biết mã số của các phi công vừa lái được Boeing vừa lái được Airbus
     void cau12() {
@@ -150,6 +151,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Cho biết các loại máy bay có thể thực hiện chuyến bay VN280.
     void cau13() {
@@ -162,6 +164,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Cho biết các chuyến bay có thể được thực hiện bởi máy bay Airbus A320
     void cau14() {
@@ -174,6 +177,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Cho biết tên phí công lái máy bay Boeing
     void cau15() {
@@ -186,6 +190,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Với mỗi loại máy bay có phi công lái cho biết mã số, loại máy báy và tổng số phi công có thể lái loại máy bay đó.
     void cau16() {
@@ -198,6 +203,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Giả sử một hành khách muốn đi thẳng từ ga A đến ga B rồi quay trở về ga A. Cho biết các đường bay nào có thể đáp ứng yêu cầu này.
     void cau17() {
@@ -209,6 +215,7 @@ class ApplicationTests {
             System.out.println(chuyenBay);
         }
     }
+
     @Test
         //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
     void cau18() {
@@ -221,6 +228,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
     void cau19() {
@@ -233,6 +241,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //	Cho biết danh sách các chuyến bay có thể khởi hành trước 12:00
     void cau20() {
@@ -245,6 +254,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //	Với mỗi địa điểm xuất phát cho biết có bao nhiêu chuyến bay có thể khởi hành trước 12:00.
     void cau21() {
@@ -257,6 +267,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //		Cho biết mã số của các phi công chỉ lái được 3 loại máy bay
     void cau22() {
@@ -269,6 +280,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Với mỗi phi công có thể lái nhiều hơn 3 loại máy bay, cho biết mã số phi công và tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái.
     void cau23() {
@@ -281,6 +293,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Với mỗi phi công cho biết mã số phi công và tổng số loại máy bay mà phi công đó có thể lái
     void cau24() {
@@ -293,6 +306,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Tìm nhân viên không phải là phi công
     void cau25() {
@@ -305,6 +319,7 @@ class ApplicationTests {
 
         }
     }
+
     @Test
         //Tìm nhân viên  có lương cao nhất
     void cau26() {
@@ -318,6 +333,17 @@ class ApplicationTests {
             System.out.println(nv);
 
         }
+    }
+
+    @Test
+        //Tổng lương phải trả cho nhân viên
+    void cau27() {
+
+        List<String> list = nhanvienService.tongLuongTraNhanVien();
+
+
+        System.out.println("Tổng lương phải trả cho nhân viên là : " + list);
+
     }
 
 
